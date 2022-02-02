@@ -1,0 +1,14 @@
+{
+  "name": "js-md5-hasher",
+  "version": "1.0.0",
+  "description": "A javascript md5 password hasher",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Salar Hashemian",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^17.0.0"
+  }
+}

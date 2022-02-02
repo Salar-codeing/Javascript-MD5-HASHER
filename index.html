@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD5 Hasher</title>
+    <script src="http://www.myersdaily.org/joseph/javascript/md5.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+        *{
+            background-color: rgba(19,19,19,1);
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .main{
+            margin-top: 210px;
+        }
+
+        .main h1{
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        .main h1:hover{
+            letter-spacing: 1px;
+            transition: 0.5s;
+        }
+
+        #login-form {
+            align-self: flex-start;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .login-form-field::placeholder {
+            color: #3a3a3a;
+        }
+
+        .login-form-field {
+            border: none;
+            cursor: pointer;
+            border-bottom: 1px solid #3a3a3a;
+            margin-bottom: 10px;
+            border-radius: 3px;
+            width: 300px;
+            outline: none;
+            padding: 0px 0px 5px 5px;
+            margin: 20px;
+        }
+
+        #login-form-submit {
+            width: 100px;
+            padding: 7px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            background-color: #3a3a3a;
+            cursor: pointer;
+            outline: none;
+            margin: 20px;
+            transition: 0.5s;
+        }
+        #login-form-submit:hover{
+            width: 140px;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>MD5 hasher</h1>
+        <form id="login-form">
+            <input type="text" name="password" id="password-field" class="login-form-field" placeholder="Text">
+            <input type="submit" value="Hash" id="login-form-submit">
+          </form>
+    </div>
+    <script>
+        const loginForm = document.getElementById("login-form");
+        const loginButton = document.getElementById("login-form-submit");
+
+        loginButton.addEventListener("click", (e) => {
+            e.preventDefault();
+            const password = loginForm.password.value;
+
+            window.alert(md5(password))
+            
+        })
+    </script>
+</body>
+</html>
